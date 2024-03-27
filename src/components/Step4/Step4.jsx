@@ -13,7 +13,7 @@ const Step4 = () => {
 
 
                 <div className="left">
-                    <img src="https://media-public.canva.com/AWGso/MAEHsDAWGso/1/s.jpg"/>
+                    <img src="https://cdn.pixabay.com/photo/2015/12/18/09/28/sweden-1098348_640.jpg"/>
                 </div>
 
                 <div className="right">

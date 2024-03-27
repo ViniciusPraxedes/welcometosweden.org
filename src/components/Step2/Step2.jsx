@@ -13,7 +13,7 @@ const Step2 = () => {
 
 
                 <div className="left">
-                    <img src="https://media-public.canva.com/m1nFg/MAE6BCm1nFg/1/s.jpg"/>
+                    <img src="https://www.feline-holidays.com/Media/Feline_Holidays_CO_UK/_Profiles/8ce764d7/97c28908/Holiday%20Home%20Sweden_148-S05120.jpg?v=636869604177484499"/>
                 </div>
 
                 <div className="right">

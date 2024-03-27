@@ -22,15 +22,15 @@ const Facts = () => {
                         <p>National Day: 6 June</p>
                     </div>
                     <div className="right">
-                        <img src="https://media-private.canva.com/MADaq3DD-_o/1/screen.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJWF6QO3UH4PAAJ6Q%2F20240318%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240318T164207Z&X-Amz-Expires=102822&X-Amz-Signature=743dca34d3d5766b0d7b641adc099bd7ee4545ecada15d0091e72bdb9274bdd4&X-Amz-SignedHeaders=host%3Bx-amz-expected-bucket-owner&response-expires=Tue%2C%2019%20Mar%202024%2021%3A15%3A49%20GMT"/>
+                        <img src="https://d3dqioy2sca31t.cloudfront.net/Projects/cms/production/000/033/335/slideshow/154b96502f917b7936e1fed288d36259/slide-sweden-main-stockholm.jpg"/>
                     </div>
                 </div>
 
                 <div className="center-bottom">
-                    <img src="https://media-public.canva.com/MADQ4wa9rh4/1/screen.jpg"/>
-                    <img src="https://media-public.canva.com/MADQ45EkDFg/1/screen.jpg"/>
-                    <img src="https://media-private.canva.com/MADaqhcmRlE/1/screen.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJWF6QO3UH4PAAJ6Q%2F20240318%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240318T203645Z&X-Amz-Expires=88792&X-Amz-Signature=9452dfec7b32e284240cf56ef69d2091870f5e312187e330efbb0cd69e5ac5ef&X-Amz-SignedHeaders=host%3Bx-amz-expected-bucket-owner&response-expires=Tue%2C%2019%20Mar%202024%2021%3A16%3A37%20GMT"/>
-                    <img src="https://media-private.canva.com/MADmQrqyGwA/2/screen.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJWF6QO3UH4PAAJ6Q%2F20240319%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240319T110805Z&X-Amz-Expires=34785&X-Amz-Signature=42bf6027be2631d2d54ba9371d2953d2fa108b314ba475a3d13ff39017e8ebfd&X-Amz-SignedHeaders=host%3Bx-amz-expected-bucket-owner&response-expires=Tue%2C%2019%20Mar%202024%2020%3A47%3A50%20GMT"/>
+                    <img src="https://blog.remote.com/blog/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F8naaccf28y0f%2F67tlbXWXpcDegfPMxQrSCS%2Fd609c8ff6aef35f0b9fd0aca9ee524a5%2Fhttps___images.prismic.io_all-remote-content_a0f1e8d9-d23a-485c-8857-45e9592b8b9e_Sweden.png%3Ffm%3Dwebp%26w%3D1920&w=3840&q=75"/>
+                    <img src="https://www.travelandleisure.com/thmb/eu_fq7aoSb0sX87bxTbGsehqQEM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/stockholm-se-STOCKHOLMTG0721-6d6d4ffaf1eb4338ac6f90759dc61c11.jpg"/>
+                    <img src="https://imageio.forbes.com/specials-images/imageserve/653a523973e36a3245552513/Stockholm-old-town-city-skyline--cityscape-of-Sweden/960x0.jpg?format=jpg&width=960"/>
+                    <img src="https://camping.se/sites/cb_camping/files/styles/article_1116_x_537/public/visit-sweden-niclas_vestefjell.jpg?h=71e42331&itok=rH1sfFKn"/>
                 </div>
 
             </div>

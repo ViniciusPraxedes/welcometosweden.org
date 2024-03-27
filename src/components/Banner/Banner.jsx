@@ -1,4 +1,6 @@
 import "./Banner.scss";
+import img from './nothern.png';
+
 
 
 const Banner = () => {
@@ -10,7 +12,7 @@ const Banner = () => {
                     <h2>Erverything you need to know before you move to Sweden</h2>
                     <button>Get started</button>
                 </div>
-                <img src="https://media-public.canva.com/MADQ5M0M6gw/1/screen.jpg"/>
+                <img src={img}/>
             </div>
 
         </div>

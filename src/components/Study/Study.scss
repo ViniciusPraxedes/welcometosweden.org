@@ -1,0 +1,151 @@
+.study {
+  padding-top: 15vh;
+  padding-bottom: 15vh;
+  background-color: #014AAD;
+
+  .study-wrapper {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    border: 0px solid white;
+
+    .left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      border-left: 0px solid white;
+      text-align: left;
+
+      .top-left {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        img {
+          max-width: 110px; // Adjust according to your needs
+          height: auto;
+        }
+
+        // Example styling for LooksOneIcon
+        h2 {
+          color: #014AAD;
+          font-size: 30px;
+          border-radius: 100%;
+          padding: 10px 25px;
+          background-color: #FFDA00;
+          margin-right: 30px;
+        }
+      }
+
+      .center-left {
+        margin-top: 15vh;
+        margin-left: 8vh;
+
+        h1 {
+          font-size: 45px;
+          margin: 0;
+          color: white;
+          font-weight: lighter;
+
+        }
+
+        h2 {
+          padding-top: 20px;
+          font-size: 18px;
+          margin: 0;
+          color: white;
+          font-weight: lighter;
+          padding-right: 10vh;
+
+        }
+
+        button{
+          margin-top: 40px;
+          background-color: #FFDA00;
+          padding: 10px 20px;
+          border-radius: 20px;
+          border: 0px white;
+          cursor: pointer;
+          color: #014aad;
+          font-weight: bold;
+
+        }
+        button:hover {
+          background-color: #F8C600; /* Change background color on hover */
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      flex: 1;
+
+
+      img {
+        margin-right: auto;
+        width: 100%;
+        height: 75vh;
+        object-fit: cover;
+
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .study {
+
+    .study-wrapper {
+      display: flex;
+      width: 100%;
+      margin: auto;
+      flex-direction: column;
+
+      .left {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+
+
+        .center-left {
+          margin: auto;
+          h1 {
+            font-size: 45px;
+            margin: 0;
+            color: white;
+            font-weight: lighter;
+
+          }
+
+          h2 {
+            display: none;
+
+          }
+
+          button{
+            margin-bottom: 50px;
+          }
+
+        }
+      }
+
+      .right {
+        display: flex;
+
+        img {
+          margin: auto;
+          width: 40vh;
+          height: 60vh;
+          object-fit: cover;
+
+        }
+      }
+    }
+  }
+
+
+
+}

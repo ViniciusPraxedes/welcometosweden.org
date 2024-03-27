@@ -1,0 +1,71 @@
+.cost{
+  margin-top: 10vh;
+
+  h1{
+    color: white;
+    font-size: 5vh;
+    margin-bottom: -7vh;
+  }
+  .cost-wrapper{
+    display: flex;
+
+
+
+    .item{
+      margin: auto;
+      padding-top: 20vh;
+      padding-bottom: 20vh;
+
+      h2{
+        color: white;
+      }
+
+      img{
+        width: 40vh;
+        border-radius: 2%;
+      }
+
+      button{
+        margin-top: 40px;
+        background-color: #FFDA00;
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: 0px white;
+        cursor: pointer;
+        color: #014aad;
+        font-weight: bold;
+
+      }
+      button:hover {
+        background-color: #F8C600; /* Change background color on hover */
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cost{
+    margin-top: 10vh;
+
+    h1{
+      color: white;
+      font-size: 4vh;
+      margin-bottom: 3vh;
+    }
+
+    .cost-wrapper{
+      display: flex;
+      flex-direction: column;
+
+      .item{
+        margin: auto;
+        padding-top: 10vh;
+        padding-bottom: 0vh;
+      }
+    }
+  }
+
+
+
+
+}

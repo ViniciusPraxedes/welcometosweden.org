@@ -22,7 +22,7 @@
 
       h1 {
         color: white;
-        font-size: 44px;
+        font-size: 5vh;
       }
 
       button{
@@ -84,4 +84,60 @@
         }
       }
   }
+
+}
+
+@media screen and (max-width: 768px) {
+  .forum {
+    display: flex;
+    flex-direction: column;
+
+    .forum-wrapper {
+      width: 100%;
+      margin: auto;
+
+
+      .top-left {
+
+      }
+
+      .center-top {
+
+
+        h1 {
+          font-size: 28px;
+        }
+
+
+      }
+
+
+
+
+      .center-bottom {
+        display: flex;
+
+        .left{
+          display: none;
+        }
+        .right{
+          display: none;
+        }
+        .center{
+          h2{
+            display: none;
+          }
+          .middle-image {
+            margin: auto;
+            width: 85%; /* Adjust as needed */
+            height: 40vh; /* Adjust as needed */
+          }
+        }
+
+
+      }
+    }
+
+  }
+
 }

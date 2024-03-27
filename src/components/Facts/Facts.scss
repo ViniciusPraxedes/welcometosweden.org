@@ -66,3 +66,50 @@
     }
   }
 }
+
+
+@media screen and (max-width: 768px) {
+  .facts {
+
+
+
+    .facts-wrapper {
+
+
+      .top-left {
+
+      }
+
+      .center-top {
+
+
+        .left {
+
+
+          h2 {
+
+          }
+
+          p {
+
+          }
+        }
+
+        .right {
+          display: none;
+          img {
+
+
+          }
+        }
+      }
+
+      .center-bottom {
+        display: none;
+
+
+      }
+    }
+  }
+
+}

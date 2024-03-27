@@ -37,7 +37,7 @@ const Navbar = () => {
                     </div>
 
                     <div className="item">
-                        <Link className="link" onClick={() => {window.location.href="/"}}>Topics</Link>
+                        <Link className="link" onClick={() => {window.location.href="/topics"}}>Topics</Link>
                     </div>
 
                     <div className="item">

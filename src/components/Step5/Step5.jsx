@@ -27,7 +27,7 @@ const Step5 = () => {
                 </div>
 
                 <div className="right">
-                    <img src="https://media-private.canva.com/VsIwk/MAEIyOVsIwk/1/s.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJWF6QO3UH4PAAJ6Q%2F20240318%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240318T235858Z&X-Amz-Expires=62823&X-Amz-Signature=b4aa8b54176b30902c984847dc41da599cee9ecf5ce240834a0c31e14d88296a&X-Amz-SignedHeaders=host%3Bx-amz-expected-bucket-owner&response-expires=Tue%2C%2019%20Mar%202024%2017%3A26%3A01%20GMT"/>
+                    <img src="https://images.teamtailor-cdn.com/images/s3/teamtailor-production/user_picture_800-v9/image_uploads/a1b8aa08-c3fb-4fc0-b1f2-077f0c453464/original.png"/>
                 </div>
 
             </div>

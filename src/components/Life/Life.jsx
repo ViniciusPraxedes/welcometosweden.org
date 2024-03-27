@@ -1,26 +1,24 @@
-import "./Step1.scss";
+import "./Life.scss";
 import LooksOneIcon from '@mui/icons-material/LooksOne';
 import logo from './logo-yellow.png';
 
 
 
 
-const Step1 = () => {
+const Life = () => {
     return(
-        <div className="step1">
+        <div className="life">
 
-            <div className="step1-wrapper">
+            <div className="life-wrapper">
 
                 <div className="left">
 
                     <div className="top-left">
-                        <img src={logo} alt="Logo"/>
-                        <h2>1</h2>
                     </div>
 
                     <div className="center-left">
-                        <h1>Move to Sweden</h1>
-                        <h2>How to get a residence permit</h2>
+                        <h1>Life in Stockholm</h1>
+                        <h2>This is prime space! Use it to elaborate on your ​attention-grabbing section title. Explain what this ​section is about, share some details, and give just the ​right amount of information to get the audience hooked. ​Don't give everything away, though! After all, you want ​them to click on your call-to-action after reading this.</h2>
                         <button>Go to topic</button>
                     </div>
 
@@ -36,4 +34,4 @@ const Step1 = () => {
     )
 }
 
-export default Step1;
+export default Life;
