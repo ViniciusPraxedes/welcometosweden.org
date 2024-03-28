@@ -8,6 +8,7 @@ const Documents = () => {
         <div className="documents">
 
             <div className="documents-wrapper">
+                <h1>Documents</h1>
 
 
 

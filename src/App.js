@@ -1,8 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from "./components/Navbar/Navbar";
+
 import Documents from "./pages/Documents/Documents";
+import Taxes from "./pages/Taxes/Taxes";
+import Housing from "./pages/Housing/Housing";
+import Banking from "./pages/Banking/Banking";
+import Jobs from "./pages/Jobs/Jobs";
+import Education from "./pages/Education/Education";
+import Language from "./pages/Language/Language";
+
+
+
+
+
+import Navbar from "./components/Navbar/Navbar";
 import Topics from "./pages/Topics/Topics";
 import Home from "./pages/Home/Home";
 import Banner from "./components/Banner/Banner";
@@ -30,6 +42,14 @@ function App() {
                   <Route path="/" element={<Home />} />
                   <Route path="/topics" element={<Topics />} />
                   <Route path="/topics/documents" element={<Documents />} />
+                  <Route path="/topics/taxes" element={<Taxes />} />
+                  <Route path="/topics/housing" element={<Housing />} />
+                  <Route path="/topics/banking" element={<Banking />} />
+                  <Route path="/topics/jobs" element={<Jobs />} />
+                  <Route path="/topics/education" element={<Education />} />
+                  <Route path="/topics/language" element={<Language />} />
+
+                  
               </Routes>
               <Footer />
           </Router>
