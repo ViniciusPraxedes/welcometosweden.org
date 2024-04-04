@@ -1,12 +1,12 @@
-import "./Forum.scss";
+import "./ForumInfo.scss";
 import logo from './logo-yellow.png';
 
 
-const Forum = () => {
+const ForumInfo = () => {
     return(
-        <div className="forum">
+        <div className="forum-info">
 
-            <div className="forum-wrapper">
+            <div className="forum-info-wrapper">
 
 
                 <div className="center-top">
@@ -40,4 +40,4 @@ const Forum = () => {
     )
 }
 
-export default Forum;
+export default ForumInfo;

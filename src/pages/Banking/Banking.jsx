@@ -1,20 +1,26 @@
 
 import "./Banking.scss";
-
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
 
 
 
 const Banking = () => {
     return(
-        <div className="banking">
+        <>
+            <Navbar/>
+            <div className="banking">
 
-            <div className="banking-wrapper">
-                <h1>Banking</h1>
+                <div className="banking-wrapper">
+                    <h1>Banking</h1>
 
+
+                </div>
 
             </div>
+            <Footer/>
+        </>
 
-        </div>
     )
 }
 

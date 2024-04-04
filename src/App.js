@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -14,47 +13,61 @@ import Language from "./pages/Language/Language";
 
 
 
-import Navbar from "./components/Navbar/Navbar";
+
 import Topics from "./pages/Topics/Topics";
+import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
 import Home from "./pages/Home/Home";
-import Banner from "./components/Banner/Banner";
-import Forum from "./components/Forum/Forum";
-import Facts from "./components/Facts/Facts";
-import Life from "./components/Life/Life";
+import Forum from "./pages/Forum/Forum";
+
+import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-import Nature from "./components/Nature/Nature";
-import Study from "./components/Study/Study";
-import Cost from "./components/Cost/Cost";
-import Step1 from "./components/Step1/Step1";
-import Step2 from "./components/Step2/Step2";
-import Step3 from "./components/Step3/Step3";
-import Step4 from "./components/Step4/Step4";
-import Step5 from "./components/Step5/Step5";
-import Step6 from "./components/Step6/Step6";
+import {useState} from "react";
+
 
 
 function App() {
-  return (
-      <div className="App">
-          <Router>
-              <Navbar />
-              <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/topics" element={<Topics />} />
-                  <Route path="/topics/documents" element={<Documents />} />
-                  <Route path="/topics/taxes" element={<Taxes />} />
-                  <Route path="/topics/housing" element={<Housing />} />
-                  <Route path="/topics/banking" element={<Banking />} />
-                  <Route path="/topics/jobs" element={<Jobs />} />
-                  <Route path="/topics/education" element={<Education />} />
-                  <Route path="/topics/language" element={<Language />} />
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-                  
-              </Routes>
-              <Footer />
-          </Router>
-      </div>
-  );
+    // Function to set login status
+    const handleLogin = () => {
+        setIsLoggedIn(true);
+    };
+
+    // Function to set logout status
+    const handleLogout = () => {
+        setIsLoggedIn(false);
+    };
+
+    return (
+        <div className="App">
+            <Router>
+                <Routes>
+                    {/*
+                    <Route
+                        path="/forum"
+                        element={isLoggedIn ? <Forum /> : <Login onLogin={handleLogin} />}
+                    />
+                    */
+                    }
+
+                    <Route path="/" element={<Home />} />
+                    <Route path="/forum" element={<Forum />} />
+                    <Route path="/topics" element={<Topics />} />
+                    <Route path="/login" element={<Login onLogin={handleLogin} />} />
+                    <Route path="/register" element={<Register />} />
+                    <Route path="/topics/documents" element={<Documents />} />
+                    <Route path="/topics/taxes" element={<Taxes />} />
+                    <Route path="/topics/housing" element={<Housing />} />
+                    <Route path="/topics/banking" element={<Banking />} />
+                    <Route path="/topics/jobs" element={<Jobs />} />
+                    <Route path="/topics/education" element={<Education />} />
+                    <Route path="/topics/language" element={<Language />} />
+                </Routes>
+            </Router>
+        </div>
+    );
 }
+
 
 export default App;

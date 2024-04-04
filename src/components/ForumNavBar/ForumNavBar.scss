@@ -1,11 +1,6 @@
-.navbar {
+.forum-navbar {
   background-color: #014aad;
   border-bottom: 1px solid white;
-  overflow: hidden;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
-  z-index: 3;
 
   .wrapper{
     display: flex;
@@ -152,6 +147,7 @@
         color: white;
         padding-right: 2px;
         padding-top: 2px;
+        font-size: 4vh;
       }
 
 
@@ -166,7 +162,7 @@
 
 
 @media screen and (max-width: 768px) {
-  .navbar{
+  .forum-navbar{
 
     .wrapper {
       flex-direction: column;
@@ -198,7 +194,7 @@
       }
 
       .left {
-       // background-color: blue;
+        // background-color: blue;
         order: -2;
         margin: auto;
 
