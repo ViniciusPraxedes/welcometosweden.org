@@ -23,6 +23,7 @@ import Forum from "./pages/Forum/Forum";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import {useState} from "react";
+import Comments from "./pages/Comments/Comments";
 
 
 
@@ -57,6 +58,7 @@ function App() {
                     <Route path="/login" element={<Login onLogin={handleLogin} />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/topics/documents" element={<Documents />} />
+                    <Route path="/comments/:id" element={<Comments />} />
                     <Route path="/topics/taxes" element={<Taxes />} />
                     <Route path="/topics/housing" element={<Housing />} />
                     <Route path="/topics/banking" element={<Banking />} />

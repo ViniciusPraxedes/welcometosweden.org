@@ -88,11 +88,11 @@
 }
 
 @media screen and (max-width: 768px) {
-  .forum {
+  .forum-info {
     display: flex;
     flex-direction: column;
 
-    .forum-wrapper {
+    .forum-info-wrapper {
       width: 100%;
       margin: auto;
 
@@ -131,6 +131,7 @@
             margin: auto;
             width: 85%; /* Adjust as needed */
             height: 40vh; /* Adjust as needed */
+            padding-bottom: 5vh;
           }
         }
 

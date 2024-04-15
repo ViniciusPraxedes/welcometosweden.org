@@ -28,6 +28,13 @@ const Login = () => {
                             <input type="password" placeholder="Password" />
                             <button>Login</button>
                         </form>
+                        <div className="go-to">
+                            <span>Don't you have an account?</span>
+                            <Link to="/register">
+                                <button>Register</button>
+                            </Link>
+                        </div>
+
                     </div>
                 </div>
             </div>

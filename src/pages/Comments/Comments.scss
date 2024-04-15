@@ -1,0 +1,45 @@
+.comments{
+  .icon{
+    display: flex;
+    font-size: 7vh;
+    margin-right: auto;
+    padding-top: 5vh;
+    padding-left: 10vh;
+  }
+
+  .center-comments{
+    height: 65vh; /* set a fixed height for the div */
+    overflow-y: scroll; /* enable vertical scrollbar */
+  }
+
+  .comment-input{
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: row;
+
+    .text-box{
+      padding: 12px 20px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      background-color: #f8f8f8;
+      font-size: 16px;
+      resize: none;
+      margin-left: 26vh;
+      width: 100vh;
+      height: 10vh;
+    }
+
+    button{
+      padding: 2vh;
+      background-color: #014AAD;
+      color: white;
+      border-radius: 0px 10px 10px 0px;
+    }
+
+    .cross{
+      font-size: 4vh;
+      cursor: pointer;
+    }
+  }
+}

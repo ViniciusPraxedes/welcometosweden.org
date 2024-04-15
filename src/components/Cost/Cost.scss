@@ -1,5 +1,6 @@
 .cost{
-  margin-top: 10vh;
+  padding-top: 20vh;
+  background-color: #014AAD;
 
   h1{
     color: white;
@@ -45,7 +46,7 @@
 
 @media screen and (max-width: 768px) {
   .cost{
-    margin-top: 10vh;
+    padding-bottom:10vh ;
 
     h1{
       color: white;
