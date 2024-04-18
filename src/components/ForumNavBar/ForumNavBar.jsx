@@ -5,6 +5,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import AddIcon from '@mui/icons-material/Add';
+import HomeIcon from '@mui/icons-material/Home';
 
 import "./ForumNavBar.scss";
 
@@ -38,7 +39,7 @@ const ForumNavBar = () => {
                     </div>
 
                     <div className="item">
-                        <Link className="link" onClick={() => {window.location.href="/"}}><NotificationsIcon className="icon"/></Link>
+                        <Link className="link" onClick={() => {window.location.href="/"}}><HomeIcon className="icon"/></Link>
                     </div>
 
                     <div className="item">

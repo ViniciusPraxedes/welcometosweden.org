@@ -1,9 +1,16 @@
 import "./Study.scss";
+import {Link} from "react-router-dom";
 
 
 
 
 const Study= () => {
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
     return(
         <div className="study">
 
@@ -16,8 +23,15 @@ const Study= () => {
 
                     <div className="center-left">
                         <h1>Studying in Sweden</h1>
-                        <h2>This is prime space! Use it to elaborate on your ​attention-grabbing section title. Explain what this ​section is about, share some details, and give just the ​right amount of information to get the audience hooked. ​Don't give everything away, though! After all, you want ​them to click on your call-to-action after reading this.</h2>
-                        <button>Go to topic</button>
+                        <h2>Studying in Sweden means embracing a dynamic
+                            academic environment in a progressive society.
+                            With top-notch programs, emphasis on innovation,
+                            and a supportive atmosphere, students gain not just
+                            knowledge but also valuable life experiences. Plus,
+                            Sweden's commitment to sustainability and equality adds
+                            depth to the educational journey.</h2>
+                        <Link to="/topics"> <button onClick={scrollToTop}>Go to topic</button> </Link>
+
                     </div>
 
 

@@ -1,10 +1,18 @@
 import "./Step4.scss";
 import LooksOneIcon from '@mui/icons-material/LooksOne';
 import logo from './logo-yellow.png';
+import {Link} from "react-router-dom";
 
 
 
 const Step4 = () => {
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+
     return(
         <div className="step4">
 
@@ -26,7 +34,9 @@ const Step4 = () => {
                     <div className="center-right">
                         <h1>Swedish</h1>
                         <h2>Learn the Swedish language</h2>
-                        <button>Go to topic</button>
+                        <Link to="/topics/language"> <button onClick={scrollToTop}>Go to topic</button> </Link>
+
+
                     </div>
 
                 </div>

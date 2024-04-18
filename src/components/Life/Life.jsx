@@ -1,11 +1,18 @@
 import "./Life.scss";
 import LooksOneIcon from '@mui/icons-material/LooksOne';
 import logo from './logo-yellow.png';
+import {Link} from "react-router-dom";
 
 
 
 
 const Life = () => {
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
     return(
         <div className="life">
 
@@ -18,8 +25,15 @@ const Life = () => {
 
                     <div className="center-left">
                         <h1>Life in Stockholm</h1>
-                        <h2>This is prime space! Use it to elaborate on your ​attention-grabbing section title. Explain what this ​section is about, share some details, and give just the ​right amount of information to get the audience hooked. ​Don't give everything away, though! After all, you want ​them to click on your call-to-action after reading this.</h2>
-                        <button>Go to topic</button>
+                        <h2>Stockholm seamlessly blends history with modernity,
+                            boasting medieval charm alongside cutting-edge design.
+                            From the cobblestone streets of Gamla Stan to its vibrant
+                            arts scene and stunning natural surroundings, life in Stockholm
+                            offers a perfect balance of cultural richness and sustainable living.
+                            Whether wandering through historic alleyways or enjoying the city's green
+                            spaces, Stockholm captivates with its unique blend of past and present.</h2>
+                        <Link to="/topics"> <button onClick={scrollToTop}>Go to topic</button> </Link>
+
                     </div>
 
 

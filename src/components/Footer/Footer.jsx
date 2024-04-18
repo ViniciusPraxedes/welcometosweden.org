@@ -3,17 +3,23 @@ import LooksOneIcon from '@mui/icons-material/LooksOne';
 import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 
 import logo from './logo-yellow.png';
+import {Link} from "react-router-dom";
 
 
 
 const Footer = () => {
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
     return(
         <div className="footer">
 
             <div className="footer-wrapper">
 
                 <div className="top">
-
                     <h1 className="top-left"><VolunteerActivismIcon className="icon"/>  Donate to keep the project going</h1>
                 </div>
 
@@ -29,18 +35,25 @@ const Footer = () => {
 
                     <div className="item">
                         <h2>ABOUT</h2>
-                        <p>Created By Vinicius Praxedes</p>
+                        <p>Made with ❤️ by Vinicius Praxedes</p>
                     </div>
 
                     <div className="item">
                         <h2>Topics</h2>
-                        <p>Taxes</p>
-                        <p>Housing</p>
-                        <p>Documentation</p>
-                        <p>Banking</p>
-                        <p>Jobs</p>
-                        <p>Education</p>
-                        <p>Language</p>
+                        <Link to="/topics/taxes" onClick={scrollToTop}>Taxes</Link>
+
+                        <Link to="/topics/housing" onClick={scrollToTop}>Housing</Link>
+
+                        <Link to="/topics/documents" onClick={scrollToTop}>Documents</Link>
+
+                        <Link to="/topics/banking" onClick={scrollToTop}>Banking</Link>
+
+                        <Link to="/topics/jobs" onClick={scrollToTop}>Jobs</Link>
+
+                        <Link to="/topics/education" onClick={scrollToTop}>Education</Link>
+
+                        <Link to="/topics/language" onClick={scrollToTop}>Language</Link>
+
                     </div>
 
                     <div className="item">

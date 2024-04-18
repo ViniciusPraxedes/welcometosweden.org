@@ -1,11 +1,18 @@
 import "./Step3.scss";
 import LooksOneIcon from '@mui/icons-material/LooksOne';
 import logo from './logo-yellow.png';
+import {Link} from "react-router-dom";
 
 
 
 
 const Step3 = () => {
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
     return(
         <div className="step3">
 
@@ -21,7 +28,9 @@ const Step3 = () => {
                     <div className="center-left">
                         <h1>Documents</h1>
                         <h2>How to get an ID card</h2>
-                        <button>Go to topic</button>
+                        <Link to="/topics/documents"> <button onClick={scrollToTop}>Go to topic</button> </Link>
+
+
                     </div>
 
 

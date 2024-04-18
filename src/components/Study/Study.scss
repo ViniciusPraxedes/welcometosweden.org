@@ -39,10 +39,10 @@
 
       .center-left {
         margin-top: 15vh;
-        margin-left: 8vh;
+        margin-left: 0vh;
 
         h1 {
-          font-size: 45px;
+          font-size: 55px;
           margin: 0;
           color: white;
           font-weight: lighter;
@@ -51,7 +51,7 @@
 
         h2 {
           padding-top: 20px;
-          font-size: 18px;
+          font-size: 25px;
           margin: 0;
           color: white;
           font-weight: lighter;
@@ -61,6 +61,7 @@
 
         button{
           margin-top: 40px;
+          margin-left: 12vh;
           background-color: #FFDA00;
           padding: 10px 20px;
           border-radius: 20px;
@@ -113,7 +114,7 @@
         .center-left {
           margin: auto;
           h1 {
-            font-size: 45px;
+            font-size: 35px;
             margin: 0;
             color: white;
             font-weight: lighter;
@@ -126,7 +127,8 @@
           }
 
           button{
-            margin-bottom: 50px;
+            margin-bottom: 30px;
+            margin-right: 11vh;
           }
 
         }

@@ -1,4 +1,5 @@
 .comments{
+
   .icon{
     display: flex;
     font-size: 7vh;
@@ -14,32 +15,101 @@
 
   .comment-input{
     padding-top: 5vh;
-    display: flex;
-    flex-direction: row;
 
-    .text-box{
-      padding: 12px 20px;
-      box-sizing: border-box;
-      border: 2px solid #ccc;
-      border-radius: 4px;
-      background-color: #f8f8f8;
-      font-size: 16px;
-      resize: none;
-      margin-left: 26vh;
-      width: 100vh;
-      height: 10vh;
+    .comment-box{
+
+      display: flex;
+      flex-direction: row;
+      .text-box{
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        font-size: 16px;
+        resize: none;
+        margin-left: 26vh;
+        width: 100vh;
+        height: 10vh;
+      }
+
+      button{
+        margin-bottom: 5vh;
+        padding-bottom: 20px;
+        background-color: #014AAD;
+        color: white;
+        border-radius: 0px 10px 10px 0px;
+      }
+
+      .cross{
+        padding-top: 30px;
+        padding-bottom: 10px;
+        font-size: 4vh;
+        cursor: pointer;
+      }
     }
 
-    button{
-      padding: 2vh;
-      background-color: #014AAD;
-      color: white;
-      border-radius: 0px 10px 10px 0px;
+
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .comments{
+
+    .icon{
+      display: flex;
+      font-size: 7vh;
+      margin-right: auto;
+      padding-top: 5vh;
+      padding-bottom: 3vh;
+      padding-left: 2vh;
     }
 
-    .cross{
-      font-size: 4vh;
-      cursor: pointer;
+    .center-comments{
+      height: 65vh; /* set a fixed height for the div */
+      overflow-y: scroll; /* enable vertical scrollbar */
+    }
+
+    .comment-input{
+      padding-top: 5vh;
+
+      .comment-box{
+        width: 90%;
+
+        display: flex;
+        flex-direction: row;
+
+        .text-box{
+          padding: 12px 20px;
+          box-sizing: border-box;
+          border: 2px solid #ccc;
+          border-radius: 4px;
+          background-color: #f8f8f8;
+          font-size: 16px;
+          resize: none;
+          margin-left: 20px;
+          width: 100vh;
+          height: 10vh;
+        }
+
+        button{
+          margin-bottom: 5vh;
+          padding-bottom: 2vh;
+          background-color: #014AAD;
+          color: white;
+          border-radius: 0px 10px 10px 0px;
+        }
+
+        .cross{
+          padding-top: 2vh;
+          padding-bottom: 1vh;
+          font-size: 4vh;
+          cursor: pointer;
+        }
+      }
+
+
     }
   }
+
 }

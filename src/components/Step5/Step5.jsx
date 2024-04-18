@@ -1,10 +1,17 @@
 import "./Step5.scss";
 import LooksOneIcon from '@mui/icons-material/LooksOne';
 import logo from './logo-yellow.png';
+import {Link} from "react-router-dom";
 
 
 
 const Step5 = () => {
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
     return(
         <div className="step5">
 
@@ -20,7 +27,9 @@ const Step5 = () => {
                     <div className="center-left">
                         <h1>Jobs</h1>
                         <h2>Best ways to find a job</h2>
-                        <button>Go to topic</button>
+                        <Link to="/topics/jobs"> <button onClick={scrollToTop}>Go to topic</button> </Link>
+
+
                     </div>
 
 

@@ -166,14 +166,14 @@
 
     .wrapper {
       flex-direction: column;
-      padding-bottom: 50px;
+      padding-bottom: 25px;
 
 
       .right {
         order: 1;
         width: 100%;
         margin: auto;
-        padding-left: 30px;
+        padding-left: 55px;
         padding-top: 20px;
 
         .item{
@@ -188,7 +188,7 @@
         .search-box{
           padding-right: 30px;
           padding-bottom: 20px;
-          padding-top: 0;
+          padding-top: 2vh;
           margin: auto;
         }
       }
@@ -201,6 +201,7 @@
         .link{
 
           img{
+            display: none;
             width: 20vh;
             padding-bottom: 10px;
           }

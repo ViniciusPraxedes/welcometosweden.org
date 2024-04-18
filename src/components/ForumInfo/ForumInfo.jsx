@@ -1,8 +1,16 @@
 import "./ForumInfo.scss";
 import logo from './logo-yellow.png';
+import {Link} from "react-router-dom";
 
 
 const ForumInfo = () => {
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+
     return(
         <div className="forum-info">
 
@@ -11,7 +19,9 @@ const ForumInfo = () => {
 
                 <div className="center-top">
                     <h1>Explore our forum and get your questions answered!</h1>
-                    <button>Login</button>
+                    <Link to="/login"> <button onClick={scrollToTop}>Login</button> </Link>
+
+
                 </div>
 
                 <div className="center-bottom">
