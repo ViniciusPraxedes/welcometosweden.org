@@ -10,12 +10,35 @@ import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 import LanguageIcon from '@mui/icons-material/Language';
 import WorkIcon from '@mui/icons-material/Work';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+
 import Post from "../../components/Post/Post";
 import Footer from "../../components/Footer/Footer";
+import {Link} from "react-router-dom";
 
 const Forum = () => {
     const [data, setData] = useState([]);
     const [selectedTopic, setSelectedTopic] = useState("");
+
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleDropdown = () => {
+        setIsOpen(!isOpen);
+    };
+
+    const hideDropdown = () => {
+        setIsOpen(false);
+    };
+
+    const scrollToMiddle = () => {
+        window.scrollTo({
+            top: window.innerHeight / 3,
+            behavior: 'smooth'
+        });
+    };
+
+
 
     useEffect(() => {
         fetchData(); // Fetch initial data when component mounts
@@ -38,7 +61,29 @@ const Forum = () => {
         <>
             <ForumNavBar />
             <div className="forum">
+
+                <div className="dropdown">
+                    <button className="dropdown-button" onMouseDown={toggleDropdown}>
+                        Topics
+                        <KeyboardArrowDownIcon className="arrow" />
+                    </button>
+                    {isOpen && (
+                        <div className="dropdown-content" onMouseDown={(e) => e.stopPropagation()}>
+                            <Link onClick={() => { hideDropdown(); scrollToMiddle(); handleTopicSelect("popular"); }} >Popular</Link>
+                            <Link onClick={() => { hideDropdown(); scrollToMiddle(); handleTopicSelect("immigration"); }} >Immigration</Link>
+                            <Link onClick={() => { hideDropdown(); scrollToMiddle(); handleTopicSelect("housing"); }} >Housing</Link>
+                            <Link onClick={() => { hideDropdown(); scrollToMiddle(); handleTopicSelect("visa"); }} >Visa</Link>
+                            <Link onClick={() => { hideDropdown(); scrollToMiddle(); handleTopicSelect("language"); }} >Language</Link>
+                            <Link onClick={() => { hideDropdown(); scrollToMiddle(); handleTopicSelect("jobs"); }} >Jobs</Link>
+                            <Link onClick={() => { hideDropdown(); scrollToMiddle(); handleTopicSelect("banking"); }} >Banking</Link>
+                        </div>
+                    )}
+                </div>
+
+
+
                 <div className="forum-wrapper">
+
                     <div className="left">
                         <div className="left-top">
                             <div className="icon-container">

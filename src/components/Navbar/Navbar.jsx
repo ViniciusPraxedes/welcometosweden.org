@@ -18,10 +18,7 @@ const Navbar = () => {
 
                 <div className="center">
                     <div className="search-box">
-                        <div className="row">
-                            <input type="text" placeholder="Search..."/>
-                            <SearchIcon className="searchIcon" />
-                        </div>
+
                     </div>
                 </div>
 
@@ -37,12 +34,14 @@ const Navbar = () => {
                     </div>
 
                     <div className="item">
-                        <Link className="link" onClick={() => {window.location.href="/topics"}}>Topics</Link>
+                        <Link className="link" onClick={() => {window.location.href="/"}}>Home</Link>
                     </div>
 
                     <div className="item">
-                        <Link className="link" onClick={() => {window.location.href="/"}}>About</Link>
+                        <Link className="link" onClick={() => {window.location.href="/topics"}}>Topics</Link>
                     </div>
+
+
 
                     <div className="item">
                         <Link className="link" onClick={() => {window.location.href="/login"}}>Login</Link>

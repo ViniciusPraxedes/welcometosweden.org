@@ -1,6 +1,6 @@
 .topics {
   background-color: #014AAD;
-  padding-top: 20vh;
+  padding-top: 13vh;
 
   h1 {
     color: white;
@@ -54,7 +54,8 @@
 
 @media screen and (max-width: 768px) {
   .topics{
-    margin-top: 15vh;
+    padding-top: 4vh;
+    margin-top: 1vh;
     padding-bottom: 10vh;
 
     h1{
