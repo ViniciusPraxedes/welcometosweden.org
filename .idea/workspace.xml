@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2facac82-5a47-4808-ac81-05d96a69a913" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Banner/Banner.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Banner/Banner.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Forum/Forum.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Forum/Forum.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Forum/Forum.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Forum/Forum.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Topics/Topics.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Topics/Topics.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +67,7 @@
       <workItem from="1713184437913" duration="1758000" />
       <workItem from="1713199122183" duration="24671000" />
       <workItem from="1713456318964" duration="1988000" />
-      <workItem from="1713526326840" duration="2871000" />
+      <workItem from="1713526326840" duration="3210000" />
     </task>
     <servers />
   </component>
