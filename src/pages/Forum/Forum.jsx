@@ -70,7 +70,7 @@ const Forum = () => {
                     </button>
                     {isOpen && (
                         <div className="dropdown-content" onMouseDown={(e) => e.stopPropagation()}>
-                            <Link onClick={() => { hideDropdown(); scrollToMiddle(); handleTopicSelect("popular"); }} >Popular</Link>
+                            <Link onClick={() => { hideDropdown(); scrollToMiddle(); handleTopicSelect("popular"); }} >Popular <WhatshotIcon/></Link>
                             <Link onClick={() => { hideDropdown(); scrollToMiddle(); handleTopicSelect("immigration"); }} >Immigration</Link>
                             <Link onClick={() => { hideDropdown(); scrollToMiddle(); handleTopicSelect("housing"); }} >Housing</Link>
                             <Link onClick={() => { hideDropdown(); scrollToMiddle(); handleTopicSelect("visa"); }} >Visa</Link>

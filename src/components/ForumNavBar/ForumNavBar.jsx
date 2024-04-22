@@ -18,6 +18,7 @@ const ForumNavBar = () => {
                     <Link className="link" onClick={() => {window.location.href="/"}}><img src={logo} alt="Logo"/></Link>
                 </div>
 
+                {/*
                 <div className="center">
                     <div className="search-box">
                         <div className="row">
@@ -26,7 +27,7 @@ const ForumNavBar = () => {
                         </div>
                     </div>
                 </div>
-
+                */}
                 <div className="right">
 
                     <div className="icon">
@@ -38,7 +39,7 @@ const ForumNavBar = () => {
                     </div>
 
                     <div className="item">
-                        <Link className="link" onClick={() => {window.location.href="/"}}><HomeIcon className="icon"/></Link>
+                        <Link className="link" onClick={() => {window.location.href="/forum"}}><HomeIcon className="icon"/></Link>
                     </div>
 
                     <div className="item">

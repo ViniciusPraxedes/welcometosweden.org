@@ -48,7 +48,7 @@ const AddPost = () => {
                     </div>
 
                     <div className="AddPost-content">
-                        <label>Content</label>
+                        <label>Text</label>
                         <textarea
                             required
                             minLength={5}
