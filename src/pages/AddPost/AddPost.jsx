@@ -20,7 +20,7 @@ const AddPost = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:8080/forum/post', formData);
+            const response = await axios.post('https://forumservice.onrender.com/forum/post', formData);
             setResponse(response.data);
         } catch (error) {
             console.error('Error occurred:', error);

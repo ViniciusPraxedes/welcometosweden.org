@@ -14,10 +14,10 @@ const Post = ({ item }) => {
     const toggleLike = async () => {
         try {
             if (!liked) {
-                await axios.post(`http://localhost:8080/forum/like/${item.id}`);
+                await axios.post(`https://forumservice.onrender.com/forum/like/${item.id}`);
                 setCount(count + 1);
             } else {
-                await axios.post(`http://localhost:8080/forum/dislike/${item.id}`);
+                await axios.post(`https://forumservice.onrender.com/forum/dislike/${item.id}`);
                 setCount(count - 1);
             }
             setLiked(!liked);

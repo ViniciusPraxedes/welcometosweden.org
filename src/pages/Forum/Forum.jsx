@@ -46,7 +46,7 @@ const Forum = () => {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get(`http://localhost:8080/forum/post/topic/${selectedTopic}`);
+            const response = await axios.get(`https://forumservice.onrender.com/forum/post/topic/${selectedTopic}`);
             const reversedData = response.data.reverse();
             setData(reversedData);
         } catch (error) {

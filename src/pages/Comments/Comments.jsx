@@ -17,7 +17,7 @@ const Comments = () => {
     const fetchData = async () => {
         try {
             const response = await axios.get(
-                `http://localhost:8080/forum/comment/${id}`
+                `https://forumservice.onrender.com/forum/comment/${id}`
             );
             const reversedData = response.data.reverse();
             console.log(reversedData);
@@ -34,7 +34,7 @@ const Comments = () => {
     const handleCommentSubmit = async () => {
         try {
             // Send a POST request to add the comment
-            await axios.post(`http://localhost:8080/forum/comment`, {
+            await axios.post(`https://forumservice.onrender.com/forum/comment`, {
                 content: commentText,
                 username: name,
                 postId: id
