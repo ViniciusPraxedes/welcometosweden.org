@@ -5,26 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2facac82-5a47-4808-ac81-05d96a69a913" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/AddPost/AddPost.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/AddPost/AddPost.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ForumNavBar/ForumNavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ForumNavBar/ForumNavBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Banking/Banking.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Banking/Banking.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Banking/Banking.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Banking/Banking.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Documents/Documents.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Documents/Documents.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Education/Education.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Education/Education.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Education/Education.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Education/Education.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Forum/Forum.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Forum/Forum.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Housing/Housing.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Housing/Housing.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Housing/Housing.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Housing/Housing.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Jobs/Jobs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Jobs/Jobs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Jobs/Jobs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Jobs/Jobs.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Language/Language.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Language/Language.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Language/Language.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Language/Language.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Taxes/Taxes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Taxes/Taxes.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Taxes/Taxes.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Taxes/Taxes.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +69,7 @@
       <workItem from="1713199122183" duration="24671000" />
       <workItem from="1713456318964" duration="1988000" />
       <workItem from="1713526326840" duration="4551000" />
-      <workItem from="1713776917574" duration="7111000" />
+      <workItem from="1713776917574" duration="7603000" />
     </task>
     <servers />
   </component>
