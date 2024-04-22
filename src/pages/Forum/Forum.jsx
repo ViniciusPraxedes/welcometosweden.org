@@ -33,7 +33,7 @@ const Forum = () => {
 
     const scrollToMiddle = () => {
         window.scrollTo({
-            top: window.innerHeight / 3,
+            top: window.innerHeight / 5,
             behavior: 'smooth'
         });
     };
