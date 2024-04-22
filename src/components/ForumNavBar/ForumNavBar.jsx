@@ -30,12 +30,11 @@ const ForumNavBar = () => {
                 <div className="right">
 
                     <div className="icon">
-                        <Link className="link" onClick={() => {window.location.href="/topics"}}><AddIcon className="icon"/></Link>
+                        <Link className="link" onClick={() => {window.location.href="/post"}}><AddIcon className="icon"/></Link>
                     </div>
 
                     <div className="item">
-
-                        <Link className="link"  to="/about">Create post</Link>
+                        <Link className="link"  to="/post">Create post</Link>
                     </div>
 
                     <div className="item">

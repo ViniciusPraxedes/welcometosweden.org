@@ -9,9 +9,9 @@ const Jobs = () => {
     return(
         <>
             <Navbar/>
-            <div className="documents">
+            <div className="jobs">
 
-                <div className="documents-wrapper">
+                <div className="jobs-wrapper">
                     <h1>Jobs in Sweden</h1>
 
                     <h2>Job Market Overview</h2>

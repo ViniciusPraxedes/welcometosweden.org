@@ -8,9 +8,9 @@ const Housing = () => {
     return(
         <>
             <Navbar/>
-            <div className="documents">
+            <div className="housing">
 
-                <div className="documents-wrapper">
+                <div className="housing-wrapper">
                     <h1>Housing in Sweden</h1>
 
                     <h2>Rental Apartments</h2>

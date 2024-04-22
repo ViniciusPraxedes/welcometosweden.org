@@ -1,0 +1,198 @@
+.AddPost {
+  background-color: #014AAD;
+
+  &-wrapper {
+    margin: 0 auto;
+    max-width: 600px;
+    height: 100vh;
+    padding: 20px;
+    background-color: #014AAD;
+    border-radius: 5px;
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10vh;
+      color: #f8c600;
+      font-size: 70px;
+    }
+
+    .AddPost-form {
+      label {
+        text-align: left;
+        display: block;
+        margin-bottom: 2vh;
+        margin-top: 4vh;
+        font-size: 35px;
+        color: #f8c600;
+
+      }
+
+      input{
+        width: 100%;
+        height: 5vh;
+        font-size: 25px;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+
+      textarea{
+        font-size: 25px;
+        height: 12vh;
+        resize: none;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+
+      select {
+        font-size: 25px;
+        width: 100%;
+        height: 5vh;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      .AddPost-topic select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: url('data:image/svg+xml;utf8,<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+        background-repeat: no-repeat;
+        background-position: right 10px top 50%;
+        background-size: 20px;
+        padding-right: 40px;
+      }
+
+      .AddPost-button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        background-color: #f8c600;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        &:hover {
+          background-color: darken(#f8c600, 5%); // Make hover background slightly darker
+
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .AddPost {
+    overflow: hidden;
+    background-color: #014AAD;
+
+    &-wrapper {
+      margin: 0 auto;
+      max-width: 600px;
+      height: 100vh;
+      padding: 20px;
+      background-color: #014AAD;
+      border-radius: 5px;
+
+      h1 {
+        text-align: center;
+        margin-bottom: 10vh;
+        margin-top: 10vh;
+        color: #f8c600;
+        font-size: 40px;
+      }
+
+      .AddPost-form {
+        label {
+          text-align: left;
+          display: block;
+          margin-bottom: 10px;
+          margin-top: 10px;
+          font-size: 25px;
+          color: #f8c600;
+
+        }
+
+        input{
+          width: 100%;
+          height: 5vh;
+          font-size: 15px;
+          padding: 10px;
+          margin-bottom: 1px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          box-sizing: border-box;
+        }
+
+
+        textarea{
+          font-size: 15px;
+          height: 12vh;
+          resize: none;
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 15px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          box-sizing: border-box;
+        }
+
+
+        select {
+          font-size: 15px;
+          width: 100%;
+          height: 7vh;
+          padding: 10px;
+          margin-bottom: 15px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          box-sizing: border-box;
+        }
+
+        .AddPost-topic select {
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          background-image: url('data:image/svg+xml;utf8,<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+          background-repeat: no-repeat;
+          background-position: right 10px top 50%;
+          background-size: 20px;
+          padding-right: 40px;
+        }
+
+        .AddPost-button {
+          display: block;
+          width: 100%;
+          padding: 1px;
+          margin-top: 20px;
+          background-color: #f8c600;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          &:hover {
+            background-color: darken(#f8c600, 5%); // Make hover background slightly darker
+
+          }
+        }
+      }
+    }
+  }
+
+
+}

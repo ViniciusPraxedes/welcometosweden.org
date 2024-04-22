@@ -9,9 +9,9 @@ const Banking = () => {
     return(
         <>
             <Navbar/>
-            <div className="documents">
+            <div className="banking">
 
-                <div className="documents-wrapper">
+                <div className="banking-wrapper">
                     <h1>Banking in Sweden</h1>
 
                     <h2>Types of Banks</h2>

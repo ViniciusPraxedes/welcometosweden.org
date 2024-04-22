@@ -9,9 +9,9 @@ const Taxes = () => {
     return(
         <>
             <Navbar/>
-            <div className="documents">
+            <div className="taxes">
 
-                <div className="documents-wrapper">
+                <div className="taxes-wrapper">
                     <h1>Taxes in Sweden</h1>
 
                     <h2>Income Taxes</h2>

@@ -9,9 +9,9 @@ const Language = () => {
     return(
         <>
             <Navbar/>
-            <div className="documents">
+            <div className="language">
 
-                <div className="documents-wrapper">
+                <div className="language-wrapper">
                     <h1>Learning Swedish Language</h1>
 
                     <h2>Why Learn Swedish?</h2>

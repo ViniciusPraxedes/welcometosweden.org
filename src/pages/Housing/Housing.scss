@@ -1,10 +1,10 @@
-.documents{
+.housing{
   padding-top: 10vh;
   background-color: #014AAD;
   width: 100%;
   height: 100%;
   padding-bottom: 10vh;
-  .documents-wrapper{
+  .housing-wrapper{
     color: white;
     text-align: left;
     padding-left: 20px;
@@ -35,13 +35,13 @@
 
 @media screen and (max-width: 768px) {
 
-  .documents{
-    padding-top: 38vh;
+  .housing{
+    padding-top: 12vh;
     background-color: #014AAD;
     width: 100%;
     height: 100%;
 
-    .documents-wrapper{
+    .housing-wrapper{
       color: white;
       padding-left: 20px;
       display: flex;

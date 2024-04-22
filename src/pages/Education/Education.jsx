@@ -8,9 +8,9 @@ const Education = () => {
     return(
         <>
             <Navbar/>
-            <div className="documents">
+            <div className="education">
 
-                <div className="documents-wrapper">
+                <div className="education-wrapper">
                     <h1>Education in Sweden</h1>
 
                     <h2>Educational System</h2>

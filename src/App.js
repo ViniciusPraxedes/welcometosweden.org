@@ -24,6 +24,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import {useState} from "react";
 import Comments from "./pages/Comments/Comments";
+import AddPost from "./pages/AddPost/AddPost";
 
 
 
@@ -58,6 +59,7 @@ function App() {
                     <Route path="/topics" element={<Topics />} />
                     <Route path="/login" element={<Login onLogin={handleLogin} />} />
                     <Route path="/register" element={<Register />} />
+                    <Route path="/post" element={<AddPost />} />
                     <Route path="/topics/documents" element={<Documents />} />
                     <Route path="/comments/:id" element={<Comments />} />
                     <Route path="/topics/taxes" element={<Taxes />} />

@@ -1,10 +1,10 @@
-.documents{
+.language{
   padding-top: 10vh;
   background-color: #014AAD;
   width: 100%;
   height: 100%;
   padding-bottom: 10vh;
-  .documents-wrapper{
+  .language-wrapper{
     color: white;
     text-align: left;
     padding-left: 20px;
@@ -35,13 +35,14 @@
 
 @media screen and (max-width: 768px) {
 
-  .documents{
-    padding-top: 38vh;
+  .language{
+    padding-top: 12vh;
+
     background-color: #014AAD;
     width: 100%;
     height: 100%;
 
-    .documents-wrapper{
+    .language-wrapper{
       color: white;
       padding-left: 20px;
       display: flex;
