@@ -194,7 +194,6 @@
         .bottom-icon{
           color: #014AAD;
           font-size: 30px;
-          transition: transform 0.3s ease;
           cursor: pointer;
         }
 
@@ -204,7 +203,6 @@
 
         .bottom-icon:hover{
           background-color: white;
-          transform: translateY(-7px); /* Move up by 5 pixels */
 
         }
 
