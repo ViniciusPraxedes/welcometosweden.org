@@ -64,7 +64,9 @@ const Comments = () => {
             <div className="comment-input">
                 <div className="comment-box">
                     <textarea className="text-box"
-                              placeholder="Add a comment..."
+                              placeholder="Add a comment... (500 characters)"
+                              minLength={5}
+                              maxLength={500}
                               value={commentText}
                               onChange={(e) => setCommentText(e.target.value)}
                     />

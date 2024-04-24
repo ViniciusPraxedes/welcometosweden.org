@@ -40,6 +40,7 @@ const AddPost = () => {
                         <input
                             required
                             minLength={5}
+                            maxLength={100}
                             type="text"
                             name="title"
                             value={formData.title}
@@ -50,8 +51,10 @@ const AddPost = () => {
                     <div className="AddPost-content">
                         <label>Text</label>
                         <textarea
+                            placeholder="Write your ideas here... (500 characters)"
                             required
                             minLength={5}
+                            maxLength={500}
                             name="content"
                             value={formData.content}
                             onChange={handleChange}
