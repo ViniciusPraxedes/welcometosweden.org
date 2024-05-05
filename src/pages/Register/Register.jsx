@@ -29,7 +29,7 @@ const Register = () => {
         e.preventDefault();
         setLoading(true); // Set loading state to true when registration starts
         try {
-            const response = await axios.post("http://localhost:8080/user/register", formData);
+            const response = await axios.post("https://forumuserservice.onrender.com/user/register", formData);
             console.log(response.data); // Handle successful response
             // You can redirect the user or show a success message here
             window.location.href = "/success";
