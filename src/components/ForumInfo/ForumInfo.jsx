@@ -19,7 +19,7 @@ const ForumInfo = () => {
 
                 <div className="center-top">
                     <h1>Explore our forum and get your questions answered!</h1>
-                    <Link to="/login"> <button onClick={scrollToTop}>Login</button> </Link>
+                    <Link to="/forum"> <button onClick={scrollToTop}>Forum</button> </Link>
 
 
                 </div>

@@ -86,18 +86,29 @@
 
         .item{
           gap: 20px;
+
+          .link{
+            font-size: 13px;
+          }
+        }
+
+        .icon{
+          font-size: 18px;
+          color: white;
+          padding-right: 2px;
+          padding-top: 2px;
         }
 
       }
 
 
       .center {
+        background-color: white;
 
 
       }
 
       .left {
-       // background-color: blue;
         order: -2;
         margin: auto;
 

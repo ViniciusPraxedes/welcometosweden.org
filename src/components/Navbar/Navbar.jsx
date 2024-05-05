@@ -29,8 +29,11 @@ const Navbar = () => {
                     </div>
 
                     <div className="item">
+                        <Link className="link"  to="/donate">Donate</Link>
+                    </div>
 
-                        <Link className="link"  to="/about">Donate</Link>
+                    <div className="item">
+                        <Link className="link" onClick={() => {window.location.href="/forum"}}>Forum</Link>
                     </div>
 
                     <div className="item">
@@ -40,8 +43,6 @@ const Navbar = () => {
                     <div className="item">
                         <Link className="link" onClick={() => {window.location.href="/topics"}}>Topics</Link>
                     </div>
-
-
 
                     <div className="item">
                         <Link className="link" onClick={() => {window.location.href="/login"}}>Login</Link>

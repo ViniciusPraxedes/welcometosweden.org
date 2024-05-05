@@ -25,6 +25,8 @@ import Footer from "./components/Footer/Footer";
 import {useState} from "react";
 import Comments from "./pages/Comments/Comments";
 import AddPost from "./pages/AddPost/AddPost";
+import Success from "./pages/Success/Success";
+import Donate from "./components/Donate/Donate";
 
 
 
@@ -56,9 +58,11 @@ function App() {
 
                     <Route path="/" element={<Home />} />
                     <Route path="/forum" element={<Forum />} />
+                    <Route path="/donate" element={<Donate />} />
                     <Route path="/topics" element={<Topics />} />
                     <Route path="/login" element={<Login onLogin={handleLogin} />} />
                     <Route path="/register" element={<Register />} />
+                    <Route path="/success" element={<Success />} />
                     <Route path="/post" element={<AddPost />} />
                     <Route path="/topics/documents" element={<Documents />} />
                     <Route path="/comments/:id" element={<Comments />} />

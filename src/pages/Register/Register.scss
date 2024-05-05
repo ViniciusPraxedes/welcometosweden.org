@@ -54,8 +54,21 @@
       padding: 50px;
       display: flex;
       flex-direction: column;
-      gap: 50px;
+      gap: 10px;
       justify-content: center;
+
+      .errorMessage{
+        display: flex;
+        background-color: #fcbca0;
+        padding-left: 15px;
+        font-size: 12px;
+
+        .errorIcon{
+          font-size: 25px;
+          padding-top: 15px;
+          padding-right: 10px;
+        }
+      }
 
       h1 {
         color: #555;
@@ -110,6 +123,21 @@
         display: none;
 
 
+      }
+
+      .right{
+        .errorMessage{
+          display: flex;
+          background-color: #fcbca0;
+          padding-left: 15px;
+          font-size: 9px;
+
+          .errorIcon{
+            font-size: 20px;
+            padding-top: 10px;
+            padding-right: 10px;
+          }
+        }
       }
 
 

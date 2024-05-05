@@ -9,6 +9,15 @@
     background-color: #014AAD;
     border-radius: 5px;
 
+    .icon{
+      display: flex;
+      font-size: 5vh;
+      margin-right: auto;
+      padding-top: 3vh;
+      padding-bottom: 10px;
+      color: white;
+    }
+
     h1 {
       text-align: center;
       margin-bottom: 10vh;
@@ -108,10 +117,19 @@
       background-color: #014AAD;
       border-radius: 5px;
 
+      .icon{
+        display: flex;
+        font-size: 7vh;
+        margin-right: auto;
+        padding-top: 1vh;
+        padding-bottom: 10px;
+        color: white;
+      }
+
       h1 {
         text-align: center;
         margin-bottom: 10vh;
-        margin-top: 10vh;
+        margin-top: 3vh;
         color: #f8c600;
         font-size: 40px;
       }

@@ -1,6 +1,8 @@
 import "./AddPost.scss";
-import {useState} from "react";
+import React, {useState} from "react";
 import axios from "axios";
+import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
+import {Link} from "react-router-dom";
 
 const AddPost = () => {
 
@@ -31,6 +33,9 @@ const AddPost = () => {
     return(
         <div className="AddPost">
             <div className="AddPost-wrapper">
+                <Link to="/forum">
+                    <ArrowCircleLeftIcon className="icon" />
+                </Link>
                 <h1>Create a post</h1>
 
                 <form className="AddPost-form" onSubmit={handleSubmit}>
