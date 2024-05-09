@@ -6,17 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2facac82-5a47-4808-ac81-05d96a69a913" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ForumNavBar/ForumNavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ForumNavBar/ForumNavBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ForumNavBar/ForumNavBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ForumNavBar/ForumNavBar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Post/Post.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Post/Post.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useLogin.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useLogin.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useSignUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useSignUp.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/AddPost/AddPost.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AddPost/AddPost.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Comments/Comment.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Comments/Comment.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Comments/Comments.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Comments/Comments.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Forum/Forum.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Forum/Forum.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Register/Register.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Register/Register.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +80,7 @@
       <workItem from="1714734008880" duration="5657000" />
       <workItem from="1714740554386" duration="380000" />
       <workItem from="1714915334462" duration="1532000" />
-      <workItem from="1714917824744" duration="58089000" />
+      <workItem from="1714917824744" duration="58968000" />
     </task>
     <servers />
   </component>

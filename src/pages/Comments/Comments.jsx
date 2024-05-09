@@ -44,7 +44,7 @@ const Comments = () => {
             }
 
             // Send a POST request to add the comment
-            await axios.post(`${BASE_URL}8070/forum/comment`, {
+            await axios.post(`https://forumservice.onrender.com/forum/comment`, {
                 content: commentText,
                 username: user.username,
                 postId: id,
