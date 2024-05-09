@@ -126,6 +126,28 @@
       }
 
       .right{
+        gap: 0;
+
+        .go-to{
+          padding-top: 30px;
+          display: block;
+
+          span {
+            font-size: 14px;
+          }
+
+          button {
+            margin-top: 10px;
+            width: 50%;
+            padding: 8px;
+            border: none;
+            background-color: #ffda00;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+          }
+        }
+
         .errorMessage{
           display: flex;
           background-color: #fcbca0;

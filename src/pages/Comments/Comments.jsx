@@ -5,19 +5,23 @@ import axios from "axios";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import AddIcon from '@mui/icons-material/Add';
 import Comment from "./Comment";
+import BASE_URL from "../../config/config";
+import {useAuthContext} from "../../hooks/useAuthContext";
 
 const Comments = () => {
     const id = useParams().id;
     const [data, setData] = useState([]);
     const [commentText, setCommentText] = useState(""); // State to hold the comment text
     const [name, setName] = useState("Vini"); // State to hold the comment text
+    const { user } = useAuthContext();
+
 
 
 
     const fetchData = async () => {
         try {
             const response = await axios.get(
-                `https://forumservice.onrender.com/forum/comment/${id}`
+                `${BASE_URL}8070/forum/comment/${id}`
             );
             const reversedData = response.data.reverse();
             console.log(reversedData);
@@ -34,10 +38,11 @@ const Comments = () => {
     const handleCommentSubmit = async () => {
         try {
             // Send a POST request to add the comment
-            await axios.post(`https://forumservice.onrender.com/forum/comment`, {
+            await axios.post(`${BASE_URL}8070/forum/comment`, {
                 content: commentText,
                 username: name,
-                postId: id
+                postId: id,
+                profilePic: user.profilePic
             });
 
             // Refresh comments after adding the new comment

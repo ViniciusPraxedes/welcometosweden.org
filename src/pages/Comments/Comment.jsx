@@ -21,7 +21,7 @@ const Comment = ({item}) =>{
                     </div>
                 </div>
                 <div className="comment-center">
-                    <p>{item.content}</p>
+                    <p className="comment-content">{item.content}</p>
                 </div>
             </div>
         </div>

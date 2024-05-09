@@ -5,12 +5,13 @@ import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 import "./Post.scss";
 import {Link} from "react-router-dom";
+import {useAuthContext} from "../../hooks/useAuthContext";
 
 const Post = ({ item }) => {
     const [count, setCount] = useState(item.likeCount);
     const [liked, setLiked] = useState(false);
 
-    // Function to toggle like
+
     const toggleLike = async () => {
         try {
             if (!liked) {

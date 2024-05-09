@@ -1,13 +1,20 @@
 import "./AddPost.scss";
-import React, {useState} from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useAuthContext } from "../../hooks/useAuthContext";
+import BASE_URL from "../../config/config";
+import CloseIcon from '@mui/icons-material/Close';
 
-const AddPost = () => {
+const AddPost = ({ closeModal }) => { // Accept closeModal function as prop
+
+    const { user } = useAuthContext();
 
     const [formData, setFormData] = useState({
-        username: 'Vini',
+        username: user.username,
+        userId: user.id,
+        profilePic: user.profilePic,
         title: '',
         content: '',
         topic: ''
@@ -22,7 +29,7 @@ const AddPost = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('https://forumservice.onrender.com/forum/post', formData);
+            const response = await axios.post(`${BASE_URL}8070/forum/post`, formData);
             setResponse(response.data);
         } catch (error) {
             console.error('Error occurred:', error);
@@ -33,9 +40,9 @@ const AddPost = () => {
     return(
         <div className="AddPost">
             <div className="AddPost-wrapper">
-                <Link to="/forum">
-                    <ArrowCircleLeftIcon className="icon" />
-                </Link>
+                <div className="close-modal" onClick={closeModal}> {/* Close modal when navigating back */}
+                    <CloseIcon className="icon" />
+                </div>
                 <h1>Create a post</h1>
 
                 <form className="AddPost-form" onSubmit={handleSubmit}>
@@ -88,11 +95,8 @@ const AddPost = () => {
 
                 </form>
             </div>
-
-
         </div>
     );
-
 }
 
 export default AddPost;

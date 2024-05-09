@@ -14,14 +14,21 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 import Post from "../../components/Post/Post";
 import Footer from "../../components/Footer/Footer";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import BASE_URL from "../../config/config";
 
 const Forum = () => {
     const [data, setData] = useState([]);
     const [selectedTopic, setSelectedTopic] = useState("");
-
-
     const [isOpen, setIsOpen] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        // Scroll to the top when the component mounts
+        window.scrollTo(0, 0);
+        fetchData();
+    }, [selectedTopic]);
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
@@ -31,60 +38,51 @@ const Forum = () => {
         setIsOpen(false);
     };
 
-    const scrollToMiddle = () => {
-        window.scrollTo({
-            top: window.innerHeight / 5,
-            behavior: 'smooth'
-        });
-    };
-
-
-
-    useEffect(() => {
-        fetchData(); // Fetch initial data when component mounts
-    }, [selectedTopic]); // Re-run effect when selectedTopic changes
-
     const fetchData = async () => {
+        setLoading(true);
         try {
-            const response = await axios.get(`https://forumservice.onrender.com/forum/post/topic/${selectedTopic}`);
-            const reversedData = response.data.reverse();
-            setData(reversedData);
+            let response;
+            if (selectedTopic === "popular") {
+                response = await axios.get(`${BASE_URL}8070/forum/post/popular`);
+            } else {
+                response = await axios.get(`${BASE_URL}8070/forum/post/topic/${selectedTopic}`);
+            }
+            setData(selectedTopic === "popular" ? response.data : response.data.reverse());
         } catch (error) {
-            console.error("Error fetching data:", error);
+            setError(error.message);
+        } finally {
+            setLoading(false);
         }
     };
 
     const handleTopicSelect = (topic) => {
         setSelectedTopic(topic);
+        hideDropdown();
     };
 
     return (
         <>
             <ForumNavBar />
             <div className="forum">
-
                 <div className="dropdown">
-                    <button className="dropdown-button" onMouseDown={toggleDropdown}>
+                    <button className="dropdown-button" onClick={toggleDropdown}>
                         Topics
                         <KeyboardArrowDownIcon className="arrow" />
                     </button>
                     {isOpen && (
                         <div className="dropdown-content" onMouseDown={(e) => e.stopPropagation()}>
-                            <Link onClick={() => { hideDropdown(); scrollToMiddle(); handleTopicSelect("popular"); }} >Popular <WhatshotIcon/></Link>
-                            <Link onClick={() => { hideDropdown(); scrollToMiddle(); handleTopicSelect("immigration"); }} >Immigration</Link>
-                            <Link onClick={() => { hideDropdown(); scrollToMiddle(); handleTopicSelect("housing"); }} >Housing</Link>
-                            <Link onClick={() => { hideDropdown(); scrollToMiddle(); handleTopicSelect("visa"); }} >Visa</Link>
-                            <Link onClick={() => { hideDropdown(); scrollToMiddle(); handleTopicSelect("language"); }} >Language</Link>
-                            <Link onClick={() => { hideDropdown(); scrollToMiddle(); handleTopicSelect("jobs"); }} >Jobs</Link>
-                            <Link onClick={() => { hideDropdown(); scrollToMiddle(); handleTopicSelect("banking"); }} >Banking</Link>
+                            <Link onClick={() => handleTopicSelect("popular")}>Popular <WhatshotIcon/></Link>
+                            <Link onClick={() => handleTopicSelect("immigration")}>Immigration</Link>
+                            <Link onClick={() => handleTopicSelect("housing")}>Housing</Link>
+                            <Link onClick={() => handleTopicSelect("visa")}>Visa</Link>
+                            <Link onClick={() => handleTopicSelect("language")}>Language</Link>
+                            <Link onClick={() => handleTopicSelect("jobs")}>Jobs</Link>
+                            <Link onClick={() => handleTopicSelect("banking")}>Banking</Link>
                         </div>
                     )}
                 </div>
 
-
-
                 <div className="forum-wrapper">
-
                     <div className="left">
                         <div className="left-top">
                             <div className="icon-container">
@@ -117,18 +115,33 @@ const Forum = () => {
                         </div>
                     </div>
 
+                    {loading ? (
+                        <div className="center">
+                            <h1>Loading...</h1>
+                        </div>
+                    ) : error ? (
+                        <div className="center">
+                            <h1>Error: {error}</h1>
+                        </div>
+                    ) : (
+                        <>
+                            <div className="center">
+                                <h1 className="selected-topic">{selectedTopic ? selectedTopic.charAt(0).toUpperCase() + selectedTopic.slice(1) : "All"}</h1>
+                                {data.length === 0 ? (
+                                    <div className="center">
+                                        <h1>No posts available</h1>
+                                    </div>
+                                ) : (
+                                    data.map((item, index) => (
+                                        <Post className="post" item={item} key={index} />
+                                    ))
+                                )}
+                            </div>
+                        </>
+                    )}
 
-                    <div className="center">
-                        {data.map((item, index) => (
-                            <Post className="post" item={item} key={index} />
-                        ))}
-                    </div>
 
-
-
-                    <div className="right">
-                    </div>
-
+                    <div className="right"></div>
                 </div>
             </div>
             <Footer />

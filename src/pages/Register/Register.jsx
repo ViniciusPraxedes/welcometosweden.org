@@ -1,20 +1,19 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
-import "./Register.scss";
+import ReportGmailerrorredIcon from '@mui/icons-material/ReportGmailerrorred';
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
-import ReportGmailerrorredIcon from '@mui/icons-material/ReportGmailerrorred';
+import { useSignUp } from "../../hooks/useSignUp";
+import "./Register.scss";
 
 const Register = () => {
-    const [errorMessage, setErrorMessage] = useState("");
-    const [loading, setLoading] = useState(false); // State for loading indicator
+    const { signUp, error, isLoading } = useSignUp();
 
     const [formData, setFormData] = useState({
         username: "",
         email: "",
         password: "",
-        profilePic: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC-buhde5C1FxyNtkRvkUTCe6gq73eLIv_JOycF3WMvg&s",
+        profilePic: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjdrIBLRABE_XD2OXWVRvSbnPQXm4uOh5VQTnixToSVDs1ZQ6E837uEkM2IiG9XX6gy3P1NhtjWRIdSPCVFdLaUQMuUvOv6LWYlxRh7mhXCKw4Lw-z6m2dsCw4ZxLuJ2HHmW8sZeeCini4/s1600/Dalarna_paard.png",
     });
 
     const handleChange = (e) => {
@@ -27,29 +26,8 @@ const Register = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setLoading(true); // Set loading state to true when registration starts
-        try {
-            const response = await axios.post("https://forumuserservice.onrender.com/user/register", formData);
-            console.log(response.data); // Handle successful response
-            // You can redirect the user or show a success message here
-            window.location.href = "/success";
-        } catch (error) {
-            console.error("Error registering user:", error);
-            let errorMessage = "";
-            if (error.response) {
-                console.error("Error message:", error.response.data.message);
-                errorMessage = error.response.data.message;
-            } else if (error.request) {
-                console.error("No response received:", error.request);
-                errorMessage = "No response received from the server.";
-            } else {
-                console.error("Error:", error.message);
-                errorMessage = "An error occurred while processing your request.";
-            }
-            setErrorMessage(errorMessage);
-        } finally {
-            setLoading(false); // Set loading state to false when registration finishes
-        }
+
+        await signUp(formData);
     };
 
     return (
@@ -66,19 +44,25 @@ const Register = () => {
                         </Link>
                     </div>
                     <div className="right">
-                        {errorMessage && (
-                            <div className="errorMessage">
-                                <ReportGmailerrorredIcon className="errorIcon"/>
-                                <h2>{errorMessage}</h2>
-                            </div>
-                        )}
                         <h1>Register</h1>
                         <form onSubmit={handleSubmit}>
-                            <input type="text" placeholder="Username" name="username" value={formData.username} onChange={handleChange} minLength={4} maxLength={20} required/>
-                            <input type="email" placeholder="Email" name="email" value={formData.email} onChange={handleChange} type="email" required/>
-                            <input type="password" placeholder="Password" name="password" value={formData.password} onChange={handleChange} minLength={8} maxLength={16} type="password"  required/>
-                            <button type="submit" disabled={loading} onClick={loading ? null : handleSubmit}>{loading ? 'Loading...' : 'Register'}</button>
+                            <input type="text" placeholder="Username" name="username" value={formData.username} onChange={handleChange} minLength={4} maxLength={20} required />
+                            <input type="email" placeholder="Email" name="email" value={formData.email} onChange={handleChange} type="email" required />
+                            <input type="password" placeholder="Password" name="password" value={formData.password} onChange={handleChange} minLength={8} maxLength={16} type="password" required />
+                            <button type="submit" disabled={isLoading}>{isLoading ? 'Loading...' : 'Register'}</button>
                         </form>
+                        {error && (
+                            <div className="errorMessage">
+                                <ReportGmailerrorredIcon className="errorIcon" />
+                                <h2>{error}</h2>
+                            </div>
+                        )}
+                        <div className="go-to">
+                            <span>Already have an account?</span>
+                            <Link to="/login">
+                                <button>Login</button>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,13 +1,17 @@
 .AddPost {
   background-color: #014AAD;
-
+  overflow: hidden;
   &-wrapper {
     margin: 0 auto;
     max-width: 600px;
-    height: 100vh;
+    height: 100%;
     padding: 20px;
     background-color: #014AAD;
     border-radius: 5px;
+
+    .close-modal{
+      cursor: pointer;
+    }
 
     .icon{
       display: flex;
@@ -26,11 +30,14 @@
     }
 
     .AddPost-form {
+      .AddPost-title{
+        margin-top: -7vh;
+      }
       label {
         text-align: left;
         display: block;
         margin-bottom: 2vh;
-        margin-top: 4vh;
+        margin-top: 2vh;
         font-size: 35px;
         color: #f8c600;
 
@@ -87,6 +94,7 @@
         display: block;
         width: 100%;
         padding: 10px;
+        margin-bottom: 20px;
         margin-top: 20px;
         background-color: #f8c600;
         color: #fff;
@@ -112,7 +120,7 @@
     &-wrapper {
       margin: 0 auto;
       max-width: 600px;
-      height: 100vh;
+      height: 100%;
       padding: 20px;
       background-color: #014AAD;
       border-radius: 5px;
