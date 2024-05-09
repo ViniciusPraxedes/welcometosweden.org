@@ -19,7 +19,7 @@ export const useSignUp = () => {
 
         try {
 
-            const response = await axios.post("http://localhost:8080/user/register", requestBody);
+            const response = await axios.post("https://forumuserservice.onrender.com/user/register", requestBody);
             window.location.href = "/success";
 
 

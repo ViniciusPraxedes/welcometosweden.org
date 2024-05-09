@@ -2,6 +2,43 @@
   background-color: #014aad;
   border-bottom: 1px solid white;
 
+.dialog{
+  .dialog-content{
+    #dialog-login {
+      background-color: red;
+      // Your CSS styles here
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+      h1 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      button.login-to-continue {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+
+  }
+
+}
+
+
+
+
   .wrapper{
     display: flex;
 

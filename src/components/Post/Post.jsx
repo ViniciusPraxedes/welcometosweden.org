@@ -3,17 +3,27 @@ import axios from "axios";
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
+import Dialog from "@mui/material/Dialog";
+import DialogContent from "@mui/material/DialogContent";
+import { Link } from "react-router-dom";
+import { useAuthContext } from "../../hooks/useAuthContext";
 import "./Post.scss";
-import {Link} from "react-router-dom";
-import {useAuthContext} from "../../hooks/useAuthContext";
+import {Button, DialogActions, DialogTitle} from "@mui/material";
 
 const Post = ({ item }) => {
+    const { user } = useAuthContext();
     const [count, setCount] = useState(item.likeCount);
     const [liked, setLiked] = useState(false);
-
+    const [showLoginDialog, setShowLoginDialog] = useState(false);
 
     const toggleLike = async () => {
         try {
+            // Redirect to /login if there is no user in context
+            if (!user) {
+                setShowLoginDialog(true);
+                return; // Stop further execution
+            }
+
             if (!liked) {
                 await axios.post(`https://forumservice.onrender.com/forum/like/${item.id}`);
                 setCount(count + 1);
@@ -36,6 +46,10 @@ const Post = ({ item }) => {
             setLiked(true);
         }
     }, [item.id]);
+
+    const closeLoginDialog = () => {
+        setShowLoginDialog(false);
+    };
 
     return (
         <div className="post">
@@ -66,6 +80,22 @@ const Post = ({ item }) => {
 
                 </div>
             </div>
+
+            <Dialog
+                open={showLoginDialog} onClose={closeLoginDialog}
+                aria-labelledby="alert-dialog-title"
+                aria-describedby="alert-dialog-description"
+            >
+                <DialogTitle id="alert-dialog-title">
+                    {"Login to continue"}
+                </DialogTitle>
+                <DialogContent>
+                    <Link to="/login"><Button className="login-button">Login</Button></Link>
+                </DialogContent>
+                <DialogActions>
+
+                </DialogActions>
+            </Dialog>
         </div>
     );
 };

@@ -1,7 +1,6 @@
 .comment {
   margin: auto;
   width: 70%;
-  height: 60%;
   background-color: white;
   padding: 40px;
   border-bottom: 1px solid grey;
@@ -9,7 +8,6 @@
   .comment-wrapper {
     display: flex;
     flex-direction: column;
-
     .comment-top {
       display: flex;
       padding-top: 50px;
@@ -64,6 +62,7 @@
       flex-direction: column;
       text-align: left;
 
+
       h1 {
         padding-top: 30px;
         margin-right: auto;
@@ -75,6 +74,7 @@
 
       }
       .comment-content{
+        padding-top: 20px;
         font-size: 30px;
       }
     }
@@ -111,9 +111,8 @@
 @media screen and (max-width: 768px) {
   .comment {
     margin: auto;
-    padding: 10px 0px 100px 0px;
+    padding: 10px 0px 30px 0px;
     width: 90%;
-    min-height: 450px;
     border-bottom: 1px solid grey;
 
 

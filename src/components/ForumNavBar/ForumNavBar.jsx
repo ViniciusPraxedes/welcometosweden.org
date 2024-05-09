@@ -1,4 +1,3 @@
-// ForumNavBar.jsx
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Menu from "@mui/material/Menu";
@@ -8,18 +7,27 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import AddIcon from "@mui/icons-material/Add";
 import HomeIcon from "@mui/icons-material/Home";
 import Dialog from "@mui/material/Dialog";
+import DialogContent from "@mui/material/DialogContent";
 import { useAuthContext } from "../../hooks/useAuthContext";
 import logo from "./logo-yellow.png";
 import "./ForumNavBar.scss";
 import AddPost from "../../pages/AddPost/AddPost";
+import {useLogout} from "../../hooks/useLogout";
+import {Button, DialogActions, DialogContentText, DialogTitle} from "@mui/material";
 
 const ForumNavBar = () => {
     const { user } = useAuthContext();
     const [anchorEl, setAnchorEl] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [showLoginDialog, setShowLoginDialog] = useState(false);
 
     const handleMenuOpen = (event) => {
-        setAnchorEl(event.currentTarget);
+        // Redirect to /login if there is no user in context
+        if (!user) {
+            setShowLoginDialog(true);
+        } else {
+            setAnchorEl(event.currentTarget);
+        }
     };
 
     const handleMenuClose = () => {
@@ -27,11 +35,26 @@ const ForumNavBar = () => {
     };
 
     const openModal = () => {
-        setIsModalOpen(true);
+        // Redirect to /login if there is no user in context
+        if (!user) {
+            setShowLoginDialog(true);
+        } else {
+            setIsModalOpen(true);
+        }
     };
 
     const closeModal = () => {
         setIsModalOpen(false);
+    };
+
+    const { logout } = useLogout();
+    const handleLogout = () => {
+        logout();
+        window.location.href = "/";
+    };
+
+    const closeLoginDialog = () => {
+        setShowLoginDialog(false);
     };
 
     return (
@@ -71,25 +94,38 @@ const ForumNavBar = () => {
                             <Link to="/profile">
                                 <MenuItem>Profile</MenuItem>
                             </Link>
-                            <Link to="/logout">
+                            <Link onClick={handleLogout}>
                                 <MenuItem>Logout</MenuItem>
                             </Link>
                         </Menu>
                     </div>
                 </div>
             </div>
-            <Dialog
-                open={isModalOpen}
-                onClose={closeModal}
-                sx={{
-                    '& .MuiDialog-paper': {
-                        width: '100vh' // Adjust width as needed
-                    }
-                }}
-            >
+            <Dialog open={isModalOpen} onClose={closeModal}>
                 {/* Pass closeModal function to AddPost */}
                 <AddPost closeModal={closeModal} />
             </Dialog>
+
+
+
+
+            <Dialog
+                open={showLoginDialog} onClose={closeLoginDialog}
+                aria-labelledby="alert-dialog-title"
+                aria-describedby="alert-dialog-description"
+            >
+                <DialogTitle id="alert-dialog-title">
+                    {"Login to continue"}
+                </DialogTitle>
+                <DialogContent>
+                    <Link to="/login"><Button className="login-button">Login</Button></Link>
+                </DialogContent>
+                <DialogActions>
+
+                </DialogActions>
+            </Dialog>
+
+
         </div>
     );
 };

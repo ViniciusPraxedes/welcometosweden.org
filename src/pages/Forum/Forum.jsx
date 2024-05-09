@@ -11,6 +11,7 @@ import LanguageIcon from '@mui/icons-material/Language';
 import WorkIcon from '@mui/icons-material/Work';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import ChatIcon from '@mui/icons-material/Chat';
 
 import Post from "../../components/Post/Post";
 import Footer from "../../components/Footer/Footer";
@@ -43,9 +44,9 @@ const Forum = () => {
         try {
             let response;
             if (selectedTopic === "popular") {
-                response = await axios.get(`${BASE_URL}8070/forum/post/popular`);
+                response = await axios.get(`https://forumservice.onrender.com/forum/post/popular`);
             } else {
-                response = await axios.get(`${BASE_URL}8070/forum/post/topic/${selectedTopic}`);
+                response = await axios.get(`https://forumservice.onrender.com/forum/post/topic/${selectedTopic}`);
             }
             setData(selectedTopic === "popular" ? response.data : response.data.reverse());
         } catch (error) {
@@ -78,6 +79,7 @@ const Forum = () => {
                             <Link onClick={() => handleTopicSelect("language")}>Language</Link>
                             <Link onClick={() => handleTopicSelect("jobs")}>Jobs</Link>
                             <Link onClick={() => handleTopicSelect("banking")}>Banking</Link>
+                            <Link onClick={() => handleTopicSelect("other")}>Other</Link>
                         </div>
                     )}
                 </div>
@@ -112,6 +114,9 @@ const Forum = () => {
                             <div className="icon-container">
                                 <span className="link" onClick={() => handleTopicSelect("banking")}><AccountBalanceIcon className="icon" />Banking</span>
                             </div>
+                            <div className="icon-container">
+                                <span className="link" onClick={() => handleTopicSelect("other")}><ChatIcon className="icon" />Other</span>
+                            </div>
                         </div>
                     </div>
 
@@ -126,7 +131,7 @@ const Forum = () => {
                     ) : (
                         <>
                             <div className="center">
-                                <h1 className="selected-topic">{selectedTopic ? selectedTopic.charAt(0).toUpperCase() + selectedTopic.slice(1) : "All"}</h1>
+                                <h1 className="selected-topic">{selectedTopic ? selectedTopic.charAt(0).toUpperCase() + selectedTopic.slice(1) : "All posts"}</h1>
                                 {data.length === 0 ? (
                                     <div className="center">
                                         <h1>No posts available</h1>

@@ -57,6 +57,26 @@
       gap: 10px;
       justify-content: center;
 
+      .go-to{
+        margin-top: 30px;
+        display: block;
+
+        span {
+          font-size: 14px;
+        }
+
+        button {
+          margin: 10px;
+          width: 20%;
+          padding: 8px;
+          border: none;
+          background-color: #ffda00;
+          color: white;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+
       .errorMessage{
         display: flex;
         background-color: #fcbca0;
