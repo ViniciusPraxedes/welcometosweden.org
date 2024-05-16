@@ -22,7 +22,6 @@ export const useSignUp = () => {
             const response = await axios.post("https://forumuserservice.onrender.com/user/register", requestBody);
             window.location.href = "/success";
 
-
             if (response.status !== 200) {
                 throw new Error('Sign up failed.');
             }

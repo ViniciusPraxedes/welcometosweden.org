@@ -12,11 +12,9 @@ import WorkIcon from '@mui/icons-material/Work';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import ChatIcon from '@mui/icons-material/Chat';
-
 import Post from "../../components/Post/Post";
 import Footer from "../../components/Footer/Footer";
 import { Link } from "react-router-dom";
-import BASE_URL from "../../config/config";
 
 const Forum = () => {
     const [data, setData] = useState([]);
@@ -137,8 +135,8 @@ const Forum = () => {
                                         <h1>No posts available</h1>
                                     </div>
                                 ) : (
-                                    data.map((item, index) => (
-                                        <Post className="post" item={item} key={index} />
+                                    data.map((post, index) => (
+                                        <Post className="post" post={post} key={index} />
                                     ))
                                 )}
                             </div>

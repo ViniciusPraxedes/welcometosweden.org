@@ -81,10 +81,12 @@
         flex-direction: column;
         gap: 30px;
 
+
         input {
           border: none;
           border-bottom: 1px solid lightgray;
           padding: 20px 10px;
+          font-size: 20px;
         }
 
         button {
@@ -128,6 +130,12 @@
 
       .right{
         gap: 30px;
+
+        form{
+          input{
+            font-size: 15px;
+          }
+        }
 
         .errorMessage{
           display: flex;

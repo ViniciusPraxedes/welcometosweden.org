@@ -14,11 +14,13 @@ import "./ForumNavBar.scss";
 import AddPost from "../../pages/AddPost/AddPost";
 import {useLogout} from "../../hooks/useLogout";
 import {Button, DialogActions, DialogContentText, DialogTitle} from "@mui/material";
+import Profile from "../../pages/Profile/Profile";
 
 const ForumNavBar = () => {
     const { user } = useAuthContext();
     const [anchorEl, setAnchorEl] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isModalOpenProfile, setIsModalOpenProfile] = useState(false);
     const [showLoginDialog, setShowLoginDialog] = useState(false);
 
     const handleMenuOpen = (event) => {
@@ -34,6 +36,7 @@ const ForumNavBar = () => {
         setAnchorEl(null);
     };
 
+
     const openModal = () => {
         // Redirect to /login if there is no user in context
         if (!user) {
@@ -47,15 +50,37 @@ const ForumNavBar = () => {
         setIsModalOpen(false);
     };
 
+
+    const openModalProfile = () => {
+        // Redirect to /login if there is no user in context
+        if (!user) {
+            setShowLoginDialog(true);
+        } else {
+            setIsModalOpenProfile(true);
+        }
+    };
+
+    const closeModalProfile = () => {
+        setIsModalOpenProfile(false);
+    };
+
+
+
+
     const { logout } = useLogout();
     const handleLogout = () => {
-        logout();
         window.location.href = "/";
+        logout();
+
     };
 
     const closeLoginDialog = () => {
         setShowLoginDialog(false);
     };
+
+
+
+
 
     return (
         <div className="forum-navbar">
@@ -91,9 +116,9 @@ const ForumNavBar = () => {
                             open={Boolean(anchorEl)}
                             onClose={handleMenuClose}
                         >
-                            <Link to="/profile">
+                            <div className="icon" onClick={openModalProfile}>
                                 <MenuItem>Profile</MenuItem>
-                            </Link>
+                            </div>
                             <Link onClick={handleLogout}>
                                 <MenuItem>Logout</MenuItem>
                             </Link>
@@ -101,9 +126,17 @@ const ForumNavBar = () => {
                     </div>
                 </div>
             </div>
+
+
             <Dialog open={isModalOpen} onClose={closeModal}>
                 {/* Pass closeModal function to AddPost */}
                 <AddPost closeModal={closeModal} />
+            </Dialog>
+
+
+            <Dialog open={isModalOpenProfile} onClose={closeModalProfile}>
+                {/* Pass closeModal function to AddPost */}
+                <Profile closeModal={closeModalProfile} />
             </Dialog>
 
 

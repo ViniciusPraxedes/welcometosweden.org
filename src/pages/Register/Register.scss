@@ -103,6 +103,8 @@
           border: none;
           border-bottom: 1px solid lightgray;
           padding: 20px 10px;
+          font-size: 20px;
+
         }
 
         button {
@@ -165,6 +167,12 @@
             color: white;
             font-weight: bold;
             cursor: pointer;
+          }
+        }
+
+        form{
+          input{
+            font-size: 15px;
           }
         }
 

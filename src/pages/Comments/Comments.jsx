@@ -14,9 +14,9 @@ import {Button, DialogActions, DialogTitle} from "@mui/material";
 const Comments = () => {
     const id = useParams().id;
     const [data, setData] = useState([]);
-    const [commentText, setCommentText] = useState(""); // State to hold the comment text
+    const [commentText, setCommentText] = useState("");
     const { user } = useAuthContext();
-    const [showLoginDialog, setShowLoginDialog] = useState(false); // State to control dialog visibility
+    const [showLoginDialog, setShowLoginDialog] = useState(false);
 
     const fetchData = async () => {
         try {
@@ -47,6 +47,7 @@ const Comments = () => {
             await axios.post(`https://forumservice.onrender.com/forum/comment`, {
                 content: commentText,
                 username: user.username,
+                userId: user.id,
                 postId: id,
                 profilePic: user.profilePic
             });

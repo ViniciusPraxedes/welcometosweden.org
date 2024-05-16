@@ -7,76 +7,145 @@ import Dialog from "@mui/material/Dialog";
 import DialogContent from "@mui/material/DialogContent";
 import { Link } from "react-router-dom";
 import { useAuthContext } from "../../hooks/useAuthContext";
+import { Button, DialogActions, DialogTitle } from "@mui/material";
 import "./Post.scss";
-import {Button, DialogActions, DialogTitle} from "@mui/material";
 
-const Post = ({ item }) => {
+const Post = ({ post }) => {
+
+
     const { user } = useAuthContext();
-    const [count, setCount] = useState(item.likeCount);
+    const [count, setCount] = useState(post.likeCount);
     const [liked, setLiked] = useState(false);
     const [showLoginDialog, setShowLoginDialog] = useState(false);
 
-    const toggleLike = async () => {
+
+
+
+
+
+    const fetchData = async () => {
         try {
-            // Redirect to /login if there is no user in context
-            if (!user) {
-                setShowLoginDialog(true);
-                return; // Stop further execution
+            const likeCountResponse = await axios.get(`https://forumservice.onrender.com/forum/post/likeCount/${post.id}`);
+            setCount(likeCountResponse.data);
+
+            if (user !== null){
+                const response = await axios.get(`https://forumservice.onrender.com/forum/isLiked/${post.id}/${user.id}`);
+                const isPostLiked = response.data;
+
+                if (isPostLiked) {
+                    setLiked(true);
+                }
             }
 
-            if (!liked) {
-                await axios.post(`https://forumservice.onrender.com/forum/like/${item.id}`);
-                setCount(count + 1);
-            } else {
-                await axios.post(`https://forumservice.onrender.com/forum/dislike/${item.id}`);
-                setCount(count - 1);
-            }
-            setLiked(!liked);
-            // Store liked state in localStorage
-            localStorage.setItem(`liked_${item.id}`, !liked);
+
+
         } catch (error) {
-            console.error("Error toggling like:", error);
+            console.error('Error fetching data:', error);
         }
     };
 
-    // Check if the post is liked on component mount
+
+
+
+
+
+
+
+
+
+
+
+
+
     useEffect(() => {
-        const isPostLiked = localStorage.getItem(`liked_${item.id}`);
-        if (isPostLiked === 'true') {
-            setLiked(true);
+        if (user !== null) {
+            fetchData();
         }
-    }, [item.id]);
+    }, [post.id]);
+
+
+
+
+
+
+
+
+
+
+
+    const toggleLike = async () => {
+        try {
+
+            if (!user) {
+                setShowLoginDialog(true);
+                return;
+            }
+
+            if (!liked) {
+                await axios.post(`https://forumservice.onrender.com/forum/like/${post.id}/${user.id}`);
+                setLiked(true)
+                const likeCountResponse = await axios.get(`https://forumservice.onrender.com/forum/post/likeCount/${post.id}`);
+                setCount(likeCountResponse.data);
+
+            } else {
+                await axios.post(`https://forumservice.onrender.com/forum/unlike/${post.id}/${user.id}`);
+                setLiked(false)
+                const likeCountResponse = await axios.get(`https://forumservice.onrender.com/forum/post/likeCount/${post.id}`);
+                setCount(likeCountResponse.data);
+            }
+
+        } catch (error) {
+            console.error("Error toggling like:", error);
+        }
+
+    };
+
+
+
+
 
     const closeLoginDialog = () => {
         setShowLoginDialog(false);
     };
+
+
+
+
+
+
+
+
+
+
+
+
 
     return (
         <div className="post">
             <div className="post-wrapper">
                 <div className="post-top">
                     <div className="post-top-left">
-                        <img src={item.profilePicture} alt="Profile"/>
-                        <h1>{item.username}</h1>
+                        <img src={post.profilePicture} alt="Profile"/>
+                        <h1>{post.username}</h1>
                         <h2>•</h2>
-                        <p>{item.datePosted}</p>
+                        <p>{post.datePosted}</p>
                     </div>
                     <div className="post-top-right">
                         <MoreHorizIcon className="MoreHorizonIcon"/>
                     </div>
                 </div>
                 <div className="post-center">
-                    <h1>{item.title}</h1>
-                    <p>{item.content}</p>
+                    <h1>{post.title}</h1>
+                    <p>{post.content}</p>
                 </div>
                 <div className="post-bottom">
                     <ThumbUpIcon className={`bottom-icon ${liked ? 'liked' : ''}`} onClick={toggleLike} />
                     <p>{count}</p>
 
-                    <Link to={`/comments/${item.id}`}>
+                    <Link to={`/comments/${post.id}`}>
                         <ChatBubbleIcon className="bottom-icon"/>
                     </Link>
-                    <p>{item.commentCount}</p>
+                    <p>{post.commentCount}</p>
 
                 </div>
             </div>

@@ -39,7 +39,6 @@ const Donate = () => {
                         <h1>Donate to keep the project going! <VolunteerActivismIcon className="donate-icon" /></h1>
                         <p>Your contribution makes a huge difference in keeping the project going. Every donation, no matter how small, helps me continue the work and cover the hosting costs.</p>
                         <h1>Swish</h1>
-                        <h2>Number: 0728897005</h2>
                         <h2>Name: Vinicius Praxedes Paixao</h2>
                         <img src={qrcode} alt="qrcode" />
                     </div>
