@@ -1,4 +1,4 @@
-# Welcome to Sweden
+# Welcome to Sweden - Frontend
 
 🌟 **Full stack website and forum, made with React and Java**
 
@@ -19,22 +19,24 @@ I created this website to help expats who are moving to Sweden with useful infor
 
 ## 🔧 Tech Stack
 
-- **Backend**: Java, Spring
 - **Frontend**: React
+- **Backend**: Java, Spring (see [forumService](https://github.com/ViniciusPraxedes/forumService) and [forumUserService](https://github.com/ViniciusPraxedes/forumUserService))
 - **Hosting**: AWS
+
+## 🌟 Live Demo
+
+Check out the live demo: [welcometosweden.onrender.com](https://welcometosweden.onrender.com/)
 
 ## Getting Started
 
 ### Prerequisites
 
-- Java 11 or higher
 - Node.js
-- AWS account
 
 ### Installation
 
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/WelcometoSweden.git
-   cd WelcometoSweden
+   git clone https://github.com/ViniciusPraxedes/welcometosweden.git
+   cd welcometosweden
