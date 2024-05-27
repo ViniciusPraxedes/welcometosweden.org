@@ -1,4 +1,4 @@
-# Welcome to Sweden - Frontend
+# Welcome to Sweden.org - Frontend
 
 🌟 **Full stack website and forum, made with React and Java**
 
